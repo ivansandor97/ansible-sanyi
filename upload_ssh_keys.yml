@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: sanyi
+  tasks:
+  - name: upload ssh key                
+    authorized_key:
+      user: sanyi
+      state: present
+      manage_dir: yes
+      key: https://github.com/ivansandor97.keys
